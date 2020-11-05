@@ -52,16 +52,16 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
+<b>Hi {}, my name is {}! 
 I am an Anime themed group management bot.
 Build by weebs for weebs, I specialize in managing anime and similar themed groups.
-You can find my list of available commands with /help.
+You can find my list of available commands with /help.<b/>
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
+<b>Hey there! My name is *{}*.
 I'm a Hero For Fun and help admins manage their groups with One Punch! Have a look at the following for an idea of some of \
-the things I can help you with.
+the things I can help you with.<b>
 
 *Main* commands available:
  • /help: PM's you this message.
@@ -201,31 +201,31 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add Saitama to your group",
+                            text="☑️ Add Vegeta to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
-                             text="🚑 Support Group",
-                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                             text="Contact Creator 👑",
+                             url="https://t.me/Danny004"),
                          InlineKeyboardButton(
-                             text="🔔 Updates Channel",
-                             url="https://t.me/OnePunchUpdates")
+                             text="Join Movie Group 📺",
+                             url="https://t.me/M0viesandSeries")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="🧾 Getting started guide",
-                             url="https://t.me/OnePunchUpdates/29")
+                             text="Getting started guide 👮",
+                             url="https://telegra.ph/-11-05-117")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="🗄 Source code",
+                             text="Source Code [Saitama]",
                              url="https://github.com/AnimeKaizoku/SaitamaRobot")
                      ]]))
     else:
         update.effective_message.reply_text(
-            "I'm online!\n<b>Up since:</b> <code>{}</code>".format(uptime),
+            "I'm online Dude!\n<b>Up since:</b> <code>{}</code>".format(uptime),
             parse_mode=ParseMode.HTML)
 
 
